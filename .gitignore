@@ -7,6 +7,7 @@
 # User-specific files
 .Ruserdata
 .dados_comparacao_principal.xlsx
+.StirlingEngineData.xlsx
 # Example code in package build process
 *-Ex.R
 # Output files from R CMD build
@@ -35,3 +36,4 @@ po/*~
 # RStudio Connect folder
 rsconnect/
 dados_comparacao_principal.xlsx
+StirlingEngineData.xlsx

@@ -37,19 +37,15 @@ StirlingEngineData <- StirlingEngineData %>%
 # Calculating averages w/ summarise
 SEDaverages <- StirlingEngineData %>% 
   group_by(motor) %>% 
-  summarise(peW = mean(peW), 
+  summarise(maxpevse = max(pevse),
+            peW = mean(peW), 
             nrpm = mean(nrpm), 
             pevse = mean(pevse), 
-            maxpevse = max(pevse),
             tcth = mean(tcth))
   
 SEDaverages <- SEDaverages %>%  
   mutate(ft = if_else(SEDaverages$tcth > 0.7, "LTD", 
                       if_else(SEDaverages$tcth > 0.4, "MTD", "HTD")))
-
-
- 
-
 
 ### Summaries for different engine configuration (alpha, beta, gamma)
 alphaSE <- StirlingEngineData %>%
