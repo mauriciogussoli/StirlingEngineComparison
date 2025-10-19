@@ -75,7 +75,8 @@ gammaSE <- StirlingEngineData %>%
 #                  size = cfg), 
 #              alpha = 0.3)
 # ## Specific power for different working fluid and geometries
-# ggplot(StirlingEngineData)+
-#   geom_point(aes(x = pmbar, y = pevse, colour = gas, shape = cfg))+
-#   coord_cartesian(xlim = c(0,10), 
-#                   ylim = c(0,5))
+ggplot(StirlingEngineData)+
+  geom_point(aes(x = pmbar, y = pevse, colour = gas, shape = cfg))+
+  coord_cartesian(xlim = c(0,10),
+                  ylim = c(0,5))
+
